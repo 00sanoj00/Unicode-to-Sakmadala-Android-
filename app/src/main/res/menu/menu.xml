@@ -1,0 +1,35 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_refresh"
+        android:orderInCategory="100"
+        android:icon="@drawable/copy"
+        android:title="App Info"/>
+
+    <item
+        android:id="@+id/developer"
+        android:orderInCategory="100"
+        android:title="Developer info"/>
+
+
+    <item
+        android:id="@+id/example1"
+        android:orderInCategory="100"
+        android:icon="@drawable/copy"
+        android:title="Example 1"/>
+
+
+    <item
+        android:id="@+id/example2"
+        android:orderInCategory="100"
+        android:icon="@drawable/copy"
+        android:title="Example 2"/>
+
+    <item
+        android:id="@+id/example3"
+        android:orderInCategory="100"
+        android:icon="@drawable/copy"
+        android:title="Example 3"/>
+
+
+</menu>

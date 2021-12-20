@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<item
+		android:id="@+id/imageButton"
+		android:icon="@drawable/copy"
+		android:title="Update"
+		app:showAsAction="always" />
+
+	<item
+		android:id="@+id/action_refresh"
+		android:orderInCategory="100"
+		android:icon="@drawable/copy"
+		android:title="EEmgQn"/>
+
+	<item
+		android:id="@+id/developer"
+		android:orderInCategory="100"
+		android:title="mAAgEn"/>
+
+	<item
+		android:id="@+id/tut"
+		android:orderInCategory="100"
+		android:icon="@drawable/copy"
+		android:title="zEnUmt"/>
+
+</menu>
