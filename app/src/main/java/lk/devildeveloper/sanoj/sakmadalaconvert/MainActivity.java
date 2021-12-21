@@ -29,17 +29,8 @@ import com.sdsmdg.tastytoast.TastyToast;
 import com.shashank.sony.fancygifdialoglib.FancyGifDialog;
 import com.shashank.sony.fancygifdialoglib.FancyGifDialogListener;
 import com.varunjohn1990.iosdialogs4android.IOSDialog;
-
-import org.jsoup.nodes.Document;
-
-import cc.cloudist.acplibrary.ACProgressConstant;
-import cc.cloudist.acplibrary.ACProgressFlower;
 import lk.devildeveloper.sanoj.sakmadalaconvert.htmldialog.HtmlDialog;
 import lk.devildeveloper.sanoj.sakmadalaconvert.htmldialog.HtmlDialogListener;
-import lk.devildeveloper.sanoj.zanjou.http.debug.Logger;
-import lk.devildeveloper.sanoj.zanjou.http.request.Request;
-import lk.devildeveloper.sanoj.zanjou.http.request.RequestListener;
-import lk.devildeveloper.sanoj.zanjou.http.response.XmlResponseListener;
 import smartdevelop.ir.eram.showcaseviewlib.GuideView;
 import smartdevelop.ir.eram.showcaseviewlib.config.DismissType;
 import smartdevelop.ir.eram.showcaseviewlib.config.Gravity;
@@ -55,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
    private ClipData myClip;
    private Typeface Legacys;
    private Typeface arial;
-    private ACProgressFlower dialog;
     private String linkexample;
     private Button erazers;
     private Toolbar toolbar;
@@ -80,12 +70,6 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
 
-
-        dialog = new ACProgressFlower.Builder(this)
-                .direction(ACProgressConstant.DIRECT_ANTI_CLOCKWISE)
-                .themeColor(Color.WHITE)
-                .text("Getting Example")
-                .fadeColor(Color.WHITE).build();
 
         toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("sAk|mAdl...");
@@ -792,64 +776,7 @@ public class MainActivity extends AppCompatActivity {
         text = text.replace("ශ්\u200Dරී", "x{U");//new add
         Legacy.setText(text);
     }
-    private void getvalue() {
-        try{
-            String url = linkexample;
-            Request request = Request.create(url);
-            request.setMethod(Request.GET)
-                    .setLogger(new Logger(Logger.ERROR))
-                    .setRequestListener(new RequestListener() {
-                        @Override
-                        public void onStart() {
-                            dialog.show();
-                        }
 
-                        @Override
-                        public void onFinish() {
-
-                        }
-
-                        @Override
-                        public void onUploadProgress(float progress) {
-
-                        }
-
-                        @Override
-                        public void onConnectionError(Exception e) {
-                            e.printStackTrace();
-                            dialog.dismiss();
-                        }
-                    })
-                    .setResponseListener(new XmlResponseListener() {
-                        @Override
-                        public void onOkResponse(Document document) {
-                            String ok = document.text().toString();
-
-                            unicode.setText(Html.fromHtml(document.toString()));
-                            //unicode.setText(ok);
-                            dialog.dismiss();
-                        }
-
-                        @Override
-                        public void onErrorResponse(Document document) {
-                            unicode.setText(document.text());
-                            dialog.dismiss();
-                        }
-
-                        @Override
-                        public void onParseError(Exception e) {
-                            e.printStackTrace();
-                            dialog.dismiss();
-                        }
-                    }).execute();
-
-        }catch (Exception IO){
-            dialog.dismiss();
-
-        }
-
-
-    }
     public void copymytext(){
         String uni = unicode.getText().toString();
         String clipiniya = Legacy.getText().toString();

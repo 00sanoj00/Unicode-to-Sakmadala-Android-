@@ -13,17 +13,14 @@
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
+    <style name="sflashphoto" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
     <style name="ToolbarColored" parent="AppTheme">
         <item name="android:textColorSecondary">@color/white</item>
         <item name="android:fontFamily">@font/sak</item>
     </style>
 
-    <style name="Widget.sflash.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
-        <item name="android:background">@color/black_overlay</item>
-    </style>
-
-    <style name="Widget.sflash.ButtonBar.Fullscreen" parent="">
-        <item name="android:background">@color/black_overlay</item>
-        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
-    </style>
 </resources>

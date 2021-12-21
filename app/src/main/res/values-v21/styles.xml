@@ -15,6 +15,13 @@
         <item name="android:statusBarColor" tools:ignore="NewApi">@color/colorPrimary</item>
         <item name="android:navigationBarColor" tools:ignore="NewApi">@color/colorPrimary</item>
     </style>
+
+    <style name="sflashphoto" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:statusBarColor" tools:ignore="NewApi">#191919</item>
+        <item name="android:navigationBarColor" tools:ignore="NewApi">@color/colorPrimary</item>
+    </style>
     <style name="ToolbarColored" parent="AppTheme">
         <item name="android:textColorSecondary">@color/white</item>
         <item name="android:fontFamily">@font/sak</item>

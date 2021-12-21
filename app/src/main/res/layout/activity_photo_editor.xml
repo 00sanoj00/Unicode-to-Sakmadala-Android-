@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootview"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    tools:context=".Photo_Editor">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#000000"
+        android:layout_height="match_parent"/>
+
+
+    <RelativeLayout
+        android:id="@+id/hedtoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:background="#191919">
+
+        <RelativeLayout
+            android:id="@+id/erazeraria"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:visibility="gone">
+
+            <ImageButton
+                android:id="@+id/erazer"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/ic_baseline_backspace_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/erazer"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/arial"
+                android:text="Eraser"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_8sdp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/sak"
+            android:text="sk|mdl"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_30sdp"
+            android:textStyle="bold" />
+
+
+        <ImageButton
+            android:id="@+id/save"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:background="@drawable/ic_baseline_save_24" />
+
+
+    </RelativeLayout>
+
+
+
+
+    <ja.burhanrashid52.photoeditor.PhotoEditorView
+        android:layout_below="@+id/hedtoolbar"
+        android:layout_above="@+id/toptoolbar"
+        android:id="@+id/photoEditorView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:photo_src="@drawable/sample_view" />
+
+
+    <RelativeLayout
+        android:layout_above="@+id/midlbar"
+        android:id="@+id/toptoolbar"
+        android:background="#191919"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp">
+
+
+        <ImageButton
+            android:id="@+id/addimage"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:background="@drawable/ic_baseline_add_photo_alternate_24" />
+
+
+
+
+        <ImageButton
+            android:id="@+id/redu"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_baseline_redo_24"/>
+
+        <ImageButton
+            android:id="@+id/undo"
+            android:layout_toStartOf="@+id/redu"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_baseline_undo_24"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_above="@+id/botomtoolbar"
+        android:id="@+id/midlbar"
+        android:visibility="gone"
+        android:background="#161C27"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp">
+
+        <RelativeLayout
+            android:id="@+id/imojoaria"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <ImageButton
+                android:id="@+id/openimoji"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:background="@drawable/ic_baseline_emoji_emotions_24" />
+
+            <EditText
+                android:id="@+id/emojicon_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_toStartOf="@+id/send"
+                android:layout_toEndOf="@id/openimoji"
+                android:hint="Add Emoji"
+                android:textColorHint="@color/white" />
+
+            <ImageButton
+                android:id="@+id/send"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@drawable/ic_baseline_send_24" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/brush"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_toStartOf="@+id/rushsize"
+                android:backgroundTint="@color/white"
+                android:progressBackgroundTint="@color/white"
+                android:thumbTint="@color/white" />
+
+            <TextView
+                android:id="@+id/rushsize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:fontFamily="@font/arial"
+                android:text="Brush Size"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp" />
+
+            <com.divyanshu.colorseekbar.ColorSeekBar
+                android:id="@+id/color_seek_bar"
+                android:layout_toStartOf="@+id/textcolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"/>
+
+
+            <TextView
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/_10sdp"
+                android:layout_height="wrap_content"
+                android:text="BrushColor"
+                android:fontFamily="@font/arial"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/white"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/textcolor"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rightnes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <SeekBar
+                android:id="@+id/seekBarbrigh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:backgroundTint="@color/white"
+                android:progressBackgroundTint="@color/white"
+                android:thumbTint="@color/white" />
+
+            <TextView
+                android:id="@+id/rightval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:fontFamily="@font/arial"
+                android:text="Image Darkness"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp" />
+
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/botomtoolbar"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp">
+
+        <ImageButton
+            android:id="@+id/emoji"
+            android:layout_gravity="center"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:background="@drawable/ic_baseline_emoji_emotions_24"/>
+
+
+        <ImageButton
+            android:id="@+id/brushs"
+            android:layout_gravity="center"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:background="@drawable/ic_baseline_brush_24"/>
+
+        <ImageButton
+            android:layout_gravity="center"
+            android:id="@+id/bright"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:background="@drawable/ic_baseline_settings_brightness_24"/>
+
+        <ImageButton
+            android:layout_gravity="center"
+            android:id="@+id/sakmadala"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:background="@drawable/ic_baseline_text_fields_24"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

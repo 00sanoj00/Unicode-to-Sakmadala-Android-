@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Menu">
+
+
+    <lk.rtxvideo.IntroVideoSurfaceView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#DF000000" />
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/textcon"
+        android:layout_width="@dimen/_105sdp"
+        android:layout_height="@dimen/_105sdp"
+        android:background="@drawable/round_editex">
+
+        <ImageView
+            android:id="@+id/textimage"
+            android:layout_width="@dimen/_55sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_height="@dimen/_55sdp"
+            android:src="@drawable/text"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/arial"
+            android:text="Text Converter"
+            android:layout_below="@+id/textimage"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/_10sdp"/>
+
+    </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_15sdp"/>
+
+
+        <RelativeLayout
+            android:id="@+id/imagepicker"
+            android:layout_width="@dimen/_105sdp"
+            android:layout_height="@dimen/_105sdp"
+            android:background="@drawable/round_editex">
+
+            <ImageView
+                android:id="@+id/imagedt"
+                android:layout_width="@dimen/_55sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:src="@drawable/image"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/arial"
+                android:text="Text on Image"
+                android:layout_below="@+id/imagedt"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_10sdp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
