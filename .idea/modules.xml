@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SinhalaUnicodetoLegacy.iml" filepath="$PROJECT_DIR$/SinhalaUnicodetoLegacy.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SinhalaUnicodetoLegacy.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SinhalaUnicodetoLegacy.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Unicode-to-Sakmadala-Android-.iml" filepath="$PROJECT_DIR$/.idea/modules/Unicode-to-Sakmadala-Android-.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Unicode-to-Sakmadala-Android-.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Unicode-to-Sakmadala-Android-.app.iml" />
     </modules>
   </component>
 </project>

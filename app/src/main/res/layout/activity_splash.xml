@@ -29,15 +29,28 @@
         android:textStyle="bold" />
 
     <TextView
-        android:layout_below="@+id/main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/main"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/nd"
+        android:fontFamily="@font/arial"
+        android:text="Designed by Samadara Ginige"
         android:textColor="@color/white"
         android:textSize="@dimen/_10sdp"
-        android:text="Designed by Samadara Ginige"
-        android:textStyle="bold"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nd"
+        android:layout_marginTop="@dimen/_10sdp"
         android:layout_centerHorizontal="true"
-        android:fontFamily="@font/arial"/>
+        android:fontFamily="@font/arial"
+        android:text="V 2.0 (Beta)"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold" />
 
 
 

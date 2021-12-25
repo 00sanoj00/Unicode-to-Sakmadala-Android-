@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".imagetext">
+    <Button
+        android:layout_width="match_parent"
+        android:text="Image"
+        android:id="@+id/select_file_button"
+        android:layout_height="wrap_content"/>
+    <RadioGroup
+        android:id="@+id/main_radio_group"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:checked="true"
+            android:id="@+id/text_radio_button"
+            android:text="Text map "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:checked="false"
+            android:id="@+id/block_radio_button"
+            android:text="Pixel map "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+    <EditText
+        android:hint="Text used to fill the picture"
+        android:id="@+id/text_edit"
+        android:singleLine="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="The background color of the generated image (such as white: #ffffffff) "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/back_color_edit"
+        android:singleLine="true"
+        android:layout_width="match_parent"
+        android:text="#ffffffff"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="Font (pixel block) size: "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:weightSum="10"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <SeekBar
+            android:layout_weight="9"
+            android:progress="5"
+            android:id="@+id/seek_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/seek_bar_text"
+            android:text="5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/convert_button"
+        android:text="Conversion"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:id="@+id/main_iv"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

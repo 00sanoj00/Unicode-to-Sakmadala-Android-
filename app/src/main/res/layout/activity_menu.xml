@@ -14,7 +14,20 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#DF000000" />
+        android:background="#9F000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/white"
+        android:fontFamily="@font/arial"
+        android:text="Post using the hashtag\n#UnitoSakmadala"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:textSize="@dimen/_15sdp"/>
+
 
     <LinearLayout
         android:layout_centerInParent="true"
@@ -77,6 +90,37 @@
                 android:fontFamily="@font/arial"
                 android:text="Text on Image"
                 android:layout_below="@+id/imagedt"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_10sdp"/>
+
+        </RelativeLayout>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_15sdp"/>
+
+
+        <RelativeLayout
+            android:id="@+id/ocr"
+            android:layout_width="@dimen/_105sdp"
+            android:layout_height="@dimen/_105sdp"
+            android:background="@drawable/round_editex">
+
+            <ImageView
+                android:id="@+id/imageocr"
+                android:layout_width="@dimen/_55sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:src="@drawable/ic_baseline_insert_emoticon_24"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/arial"
+                android:text="Text Image (beta)"
+                android:layout_below="@+id/imageocr"
                 android:textColor="@color/white"
                 android:layout_marginTop="@dimen/_10sdp"/>
 

@@ -7,8 +7,8 @@ android {
         applicationId "lk.devildeveloper.sanoj.sakmadalaconvert"
         minSdkVersion 21
         targetSdkVersion 31
-        versionCode 1
-        versionName "1.0(App: Alpa / Typeface :Beta)"
+        versionCode 3
+        versionName "2.0(Beta: Alpa / Typeface :Beta)"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         multiDexEnabled true
     }
@@ -67,6 +67,7 @@ dependencies {
     implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
     implementation "com.vanniktech:emoji-google:0.8.0"
     implementation 'com.divyanshu.colorseekbar:colorseekbar:1.0.2'
+    implementation 'pub.devrel:easypermissions:2.0.1'
 
 }
 repositories {

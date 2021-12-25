@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "lk.devildeveloper.sanoj.sakmadalaconvert",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "properties": [],
+      "versionCode": 3,
+      "versionName": "2.0(Beta: Alpa / Typeface :Beta)",
+      "enabled": true,
+      "outputFile": "app-release.apk"
+    }
+  ]
+}
